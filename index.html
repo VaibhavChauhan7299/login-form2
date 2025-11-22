@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Login Form in HTML and CSS</title>
+        <link rel="stylesheet"  href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="wrapper">
+        <form action="">
+            <h1>Login form</h1>
+            <div class="input-box">
+                <input type="text" placeholder="username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="password" required>
+            </div>
+            <div class="input-box">
+                <input type="date" placeholder="date of birth" required>
+            </div>
+            <div class="input-box">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value=""disabled selected >Select Your Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="course-selection">Choose Your Course:</label>
+                <select id="course-selection" name="course-selection" required>
+                    <option value="" disabled selected>Select Your Course</option>
+                    <option value="BBA">BBA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BCOM">BCOM</option>
+                    <option value="DIPLOMA">DIPLOMA</option>
+                    <option value="BSC">BSC</option>
+                    <option value="BTECH">BTECH</option>
+                    <option value="MTECH">MTECH</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="phone number">Phone number:</label>
+            <input type="tel" placeholder="Phone number(10 digits)" name="phone" required minlength="10" maxlength="10" pattern="[0-9]{10}" inputmode="numeric">
+            </div>
+            <div class="input-box">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Street, City, State, ZIP" rows="4" maxlength="500" required></textarea>
+            </div>
+        </form>
+    </body>
+</html>
