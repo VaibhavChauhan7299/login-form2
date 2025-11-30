@@ -50,8 +50,21 @@
             <input type="tel" placeholder="Phone number(10 digits)" name="phone" required minlength="10" maxlength="10" pattern="[0-9]{10}" inputmode="numeric">
             </div>
             <div class="input-box">
-                <label for="address">Address</label>
+                <label for="address">Address:</label>
                 <textarea id="address" name="address" placeholder="Street, City, State, ZIP" rows="4" maxlength="500" required></textarea>
+            </div>
+            <div class="input-box">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*"required>
+            </div>
+            <div class="input-box">
+                <label>
+                    <input type="checkbox" name="agree" id="agree" required>
+                    I agree to the <a href="/terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+                </label>
+            </div>
+            <div class="input-box">
+                <button type="submit">Submit</button> <button type="reset">Reset</button>
             </div>
         </form>
     </body>

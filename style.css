@@ -1,0 +1,132 @@
+/* Professional form styles for login-form2 */
+:root{
+	--bg-1: #eef2ff; /* soft page gradient */
+	--bg-2: #ffffff;
+	--accent: #6366f1; /* indigo */
+	--muted: #6b7280;
+	--border: #e6e9ef;
+	--radius: 12px;
+	--max-width: 520px;
+}
+
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg,var(--bg-1), #f8fafc);
+	color:#111827;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:32px 16px;
+}
+
+.wrapper{
+	width:100%;
+	max-width: 520px;
+    max-height: 90vh;             /*limit wrapper height to 90% of viewport */
+    overflow-y: auto;             /*enaable verticle scrolling inside wrapper*/
+	background: var(--bg-2);
+	border-radius:var(--radius);
+	box-shadow: 0 10px 30px rgba(17,24,39,0.08);
+	border:1px solid var(--border);
+	padding:32px;
+}
+/*smooth scrolblbar on webkit browesers (chorm , safari)*/
+.wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+.wrapper::-webkit-scrollbar-track {
+    backgorund: #f1f5f9;
+    border-radius: 3px;
+}
+.wrapper:;-webkit-scrollbar-thumb {
+    backgrund: #cbd5e1;
+    border-raius: 3px;
+}
+.wrapper::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+form h1{
+	margin:0 0 18px 0;
+	font-size:1.4rem;
+	font-weight:700;
+	text-align:center;
+	color:#0f172a;
+}
+
+.input-box{margin-bottom:14px}
+.input-box label{display:block;margin-bottom:6px;color:var(--muted);font-size:0.94rem}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="tel"],
+select, textarea, input[type="file"]{
+	width:100%;
+	padding:10px 12px;
+	font-size:0.95rem;
+	border-radius:10px;
+	border:1px solid var(--border);
+	background: #fff;
+	color: #0f172a;
+	outline: none;
+	transition: box-shadow .12s ease, border-color .12s ease;
+}
+
+textarea{min-height:110px;resize:vertical}
+
+input:focus, select:focus, textarea:focus{
+	border-color: var(--accent);
+	box-shadow: 0 6px 20px rgba(99,102,241,0.10);
+}
+
+select{appearance: none;padding-right:36px;background-image:linear-gradient(45deg,transparent 50%, #9ca3ff 50%),linear-gradient(135deg,#9ca3ff 50%, transparent 50%);background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);background-size: 6px 6px, 6px 6px;background-repeat: no-repeat, no-repeat}
+
+.input-box input[type="file"]{padding:8px}
+
+.input-box .checkbox{display:flex;align-items:center;gap:8px}
+.input-box .checkbox input{width:16px;height:16px}
+
+.btn-submit, button[type="submit"]{
+	display:inline-block;
+	width:100%;
+	padding:12px 14px;
+	font-size:1rem;
+	font-weight:600;
+	color:#fff;
+	background:var(--accent);
+	border:none;
+	border-radius:10px;
+	cursor:pointer;
+	box-shadow: 0 8px 22px rgba(99,102,241,0.18);
+	transition: transform .08s ease, box-shadow .12s ease;
+}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(99,102,241,0.22)}
+
+.input-box button[type="reset"]{
+	display:inline-block;
+	margin-top:8px;
+	padding:10px 12px;
+	background:transparent;
+	border:1px solid var(--border);
+	color:var(--muted);
+	border-radius:10px;
+	cursor:pointer;
+}
+
+.small{font-size:0.85rem;color:var(--muted)}
+
+/* responsive */
+@media (max-width:520px){
+	.wrapper{padding:20px;border-radius:10px}
+	form h1{font-size:1.2rem}
+}
+
+/* utility spacing */
+.mt-6{margin-top:6px}
+
+/* visually hide default file input label on small screens if needed */
+input[type="file"]::-webkit-file-upload-button{cursor:pointer}
